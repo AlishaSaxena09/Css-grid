@@ -47,9 +47,13 @@ table {
 	border-spacing: 0;
 }
 /* base */
-*{
+* {
+    outline: none;
     text-decoration: none;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
 }
 /* container */
 .container{
@@ -76,13 +80,16 @@ table {
     position: absolute;
     width: 100%;
 }
+.ham{
+    display: none;
+}
 .logo{
     font-weight: 800;
     color: black;
     /* box-shadow: 2px 2px 2px 10px black; */
 }
 .nav-links li{
-    margin-left: 2rem;
+    margin-left: 1.2rem;
 }
 .header a{
     color: black;
@@ -402,6 +409,100 @@ a:hover{
 button:hover{
     color: blue;
 }
-*{
-    outline: none;
-}
+
+/* resposive */
+
+@media all and (max-width: 768px) {
+    html {
+      font-size: 10px;
+    } 
+  
+    .header {
+      position: static;
+      background-color: #ffffff;
+      padding: 40px 40px;
+    }
+    .header .logo {
+      z-index: 10;
+    }
+    .header .nav-links {
+      display: none;
+    }
+    .ham{
+        margin-left: 22rem;
+    }
+    .logo a{
+        font-size: 2rem;
+        /* padding-top: 2rem; */
+    }
+    .header .ham {
+      display: inline-block;
+      font-size: 28px;
+      z-index: 10;
+    }
+    .header #toggle {
+      display: none;
+    }
+    .header .ham:checked ~ .nav-links {
+      display: inline-block;
+      background-color: rgba(214, 201, 193, 0.8);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 150px;
+    }
+    .header .ham:checked ~ .nav-links .ul {
+      display: inline-block;
+      text-align: center;
+    }
+    .header .ham:checked ~ .nav-links .ul li {
+      margin-bottom: 2.5rem;
+    }
+    .header .ham:checked ~ .nav-links .ul li a {
+      font-size: 2rem;
+      }
+    .hero-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-two{
+        grid-column: 1/span 2;
+    }
+    .third-box, .fifth-box {
+        grid-column: span 4;
+    }
+    .fourth-box{
+        grid-column: span 4;
+        padding: 10rem;
+    }
+    .sixth-box, .seventh-box, .eighth-box, .ninth-box{
+        grid-column: span 4;
+    }
+    .tenth-box{
+        padding: 8rem;
+    }
+    .tenth-box, .eleventh-box, .twelveth-box, .thirteen-box{
+        grid-column: span 4;
+    }
+    .thirteen-box{
+        padding: 8rem;
+    }
+    .contact-img-container{
+        grid-column: span 4;
+        padding: 10rem;
+    }
+    .lists{
+        grid-column: span 4;
+    }
+    .fourteen{
+        grid-column: span 4;
+    }
+    iframe{
+        width: 100%;
+    }
+    .hero-img-container{
+        grid-column: span 4;
+        padding: 10rem;
+    }
