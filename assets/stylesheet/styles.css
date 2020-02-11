@@ -424,6 +424,10 @@ button:hover{
     }
     .header .logo {
       z-index: 10;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
     }
     .header .nav-links {
       display: none;
